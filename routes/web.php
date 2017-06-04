@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('convenios', 'ConveniosController@index');
+Route::get('convenios/create', 'ConveniosController@create');
+Route::post('convenios/store', 'ConveniosController@store');
+Route::get('convenios/{id}/destroy', 'ConveniosController@destroy');
+Route::get('convenios/{id}/edit', 'ConveniosController@edit');
+Route::put('convenios/{id}/update', 'ConveniosController@update');
+
+Route::get('procedimentos', 'ProcedimentosController@index');
+Route::get('procedimentos/create', 'ProcedimentosController@create');
+Route::post('procedimentos/store', 'ProcedimentosController@store');
+Route::get('procedimentos/{id}/destroy', 'ProcedimentosController@destroy');
+Route::get('procedimentos/{id}/edit', 'ProcedimentosController@edit');
+Route::put('procedimentos/{id}/update', 'ProcedimentosController@update');
