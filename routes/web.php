@@ -28,3 +28,10 @@ Route::post('procedimentos/store', 'ProcedimentosController@store');
 Route::get('procedimentos/{id}/destroy', 'ProcedimentosController@destroy');
 Route::get('procedimentos/{id}/edit', 'ProcedimentosController@edit');
 Route::put('procedimentos/{id}/update', 'ProcedimentosController@update');
+
+Route::get('pacientes', 'PacientesController@index');
+Route::get('pacientes/create', 'PacientesController@create');
+Route::post('pacientes/store', 'PacientesController@store');
+Route::get('pacientes/{id}/destroy', 'PacientesController@destroy');
+Route::get('pacientes/{id}/edit', 'PacientesController@edit');
+Route::put('pacientes/{id}/update', 'PacientesController@update');

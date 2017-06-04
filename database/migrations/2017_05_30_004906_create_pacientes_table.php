@@ -25,6 +25,8 @@ class CreatePacientesTable extends Migration
             $table->string('bairro', 50);
             $table->string('numero', 10);
             $table->string('complemento', 50);
+            $table->string('cidade', 50);
+            $table->string('estado', 2);
             $table->string('cpf', 20);
             $table->string('rg', 20);
             $table->string('estadoCivil', 15);
