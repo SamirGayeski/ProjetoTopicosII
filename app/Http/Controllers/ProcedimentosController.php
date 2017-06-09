@@ -22,12 +22,12 @@ class ProcedimentosController extends Controller
         $novo_procedimento = $request->all();
         Procedimento::create($novo_procedimento);
 
-        return redirect('procedimentos');
+        return redirect()->route('procedimentos');
     }
 
     public function destroy($id){
         Procedimento::find($id)->delete();
-        return redirect ('procedimentos');
+        return redirect()->route('procedimentos');
     }
 
     public function edit($id){
@@ -37,6 +37,6 @@ class ProcedimentosController extends Controller
 
     public function update(ProcedimentoRequest $request, $id){
         $procedimento = Procedimento::find($id)->update($request->all());
-        return redirect('procedimentos');
+        return redirect()->route('procedimentos');
     }
 }

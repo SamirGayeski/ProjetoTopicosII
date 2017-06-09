@@ -12,7 +12,7 @@
             </ul>
         @endif
 
-        {!! Form::open(['url' => 'pacientes/store']) !!}
+        {!! Form::open(['route' => 'pacientes.store']) !!}
 
         <div class="form-group">
             {!! Form::label('nome', 'Nome:') !!}
@@ -106,6 +106,11 @@
         <div class="form-group">
             {!! Form::label('cns', 'CNS:') !!}
             {!! Form::text('cns', null, ['class'=>'form-control']) !!}
+        </div>
+
+        <div>
+            {!! Form::label('convenio_id', 'Convênio:') !!}
+            {{ Form::select('convenio_id', \App\Convenio::orderBy('nome')->pluck('nome','id')->toArray(), null, ['class'=>'form-control']) }}
         </div>
 
         <div class="form-group">

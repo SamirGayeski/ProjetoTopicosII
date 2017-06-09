@@ -13,6 +13,8 @@
                 <th>Estado Civil</th>
                 <th>CPF</th>
                 <th>CNS</th>
+                <th>Convênio</th>
+                <th>Ação</th>
             </tr>
             </thead>
             <tbody>
@@ -24,6 +26,11 @@
                     <td>{{$pac->estadoCivil}}</td>
                     <td>{{$pac->cpf}}</td>
                     <td>{{$pac->cns}}</td>
+                    <td>{{$pac->convenio->nome}}</td>
+                    <td>
+                        <a href="{{ route('pacientes.edit', ['id'=>$pac->id]) }}" class="btn-sm btn-success">Editar</a>
+                        <a href="{{ route('pacientes.destroy', ['id'=>$pac->id]) }}" class="btn-sm btn-danger">Remover</a>
+                    </td>
                 </tr>
             @endforeach
             </tbody>

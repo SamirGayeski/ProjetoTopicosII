@@ -12,7 +12,7 @@
             </ul>
         @endif
 
-        {!! Form::open(['url' => 'procedimentos/store']) !!}
+        {!! Form::open(['route' => 'procedimentos.store']) !!}
 
         <div class="form-group">
             {!! Form::label('nome', 'Nome:') !!}

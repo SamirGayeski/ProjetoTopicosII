@@ -20,12 +20,12 @@ class PacientesController extends Controller
         $novo_paciente = $request->all();
         Paciente::create($novo_paciente);
 
-        return redirect('pacientes');
+        return redirect()->route('pacientes');
     }
 
     public function destroy($id){
         Paciente::find($id)->delete();
-        return redirect ('pacientes');
+        return redirect()->route('pacientes');
     }
 
     public function edit($id){
@@ -35,6 +35,7 @@ class PacientesController extends Controller
 
     public function update(PacienteRequest $request, $id){
         $paciente = Paciente::find($id)->update($request->all());
-        return redirect('pacientes');
+        return redirect()->route('pacientes');
     }
+
 }

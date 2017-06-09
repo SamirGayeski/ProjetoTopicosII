@@ -30,4 +30,8 @@ class Paciente extends Model
         'numeroCarteirinha',
         'validade',
         'acomodacao'];
+
+    public function convenio(){
+        return $this->belongsTo('App\Convenio');
+    }
 }

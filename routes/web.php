@@ -15,23 +15,29 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('convenios', 'ConveniosController@index');
-Route::get('convenios/create', 'ConveniosController@create');
-Route::post('convenios/store', 'ConveniosController@store');
-Route::get('convenios/{id}/destroy', 'ConveniosController@destroy');
-Route::get('convenios/{id}/edit', 'ConveniosController@edit');
-Route::put('convenios/{id}/update', 'ConveniosController@update');
+Route::group(['prefix'=>'convenios', 'where'=>['id'=>'[0-9]+']], function (){
+    Route::get('', ['as'=>'convenios', 'uses'=>'ConveniosController@index']);
+    Route::get('create', ['as'=>'convenios.create', 'uses'=>'ConveniosController@create']);
+    Route::post('store', ['as'=>'convenios.store', 'uses'=>'ConveniosController@store']);
+    Route::get('{id}/destroy', ['as'=>'convenios.destroy', 'uses'=>'ConveniosController@destroy']);
+    Route::get('{id}/edit', ['as'=>'convenios.edit', 'uses'=>'ConveniosController@edit']);
+    Route::put('{id}/update', ['as'=>'convenios.update', 'uses'=>'ConveniosController@update']);
+});
 
-Route::get('procedimentos', 'ProcedimentosController@index');
-Route::get('procedimentos/create', 'ProcedimentosController@create');
-Route::post('procedimentos/store', 'ProcedimentosController@store');
-Route::get('procedimentos/{id}/destroy', 'ProcedimentosController@destroy');
-Route::get('procedimentos/{id}/edit', 'ProcedimentosController@edit');
-Route::put('procedimentos/{id}/update', 'ProcedimentosController@update');
+Route::group(['prefix'=>'procedimentos', 'where'=>['id'=>'[0-9]+']], function (){
+    Route::get('', ['as'=>'procedimentos', 'uses'=>'ProcedimentosController@index']);
+    Route::get('create', ['as'=>'procedimentos.create', 'uses'=>'ProcedimentosController@create']);
+    Route::post('store', ['as'=>'procedimentos.store', 'uses'=>'ProcedimentosController@store']);
+    Route::get('{id}/destroy', ['as'=>'procedimentos.destroy', 'uses'=>'ProcedimentosController@destroy']);
+    Route::get('{id}/edit', ['as'=>'procedimentos.edit', 'uses'=>'ProcedimentosController@edit']);
+    Route::put('{id}/update', ['as'=>'procedimentos.update', 'uses'=>'ProcedimentosController@update']);
+});
 
-Route::get('pacientes', 'PacientesController@index');
-Route::get('pacientes/create', 'PacientesController@create');
-Route::post('pacientes/store', 'PacientesController@store');
-Route::get('pacientes/{id}/destroy', 'PacientesController@destroy');
-Route::get('pacientes/{id}/edit', 'PacientesController@edit');
-Route::put('pacientes/{id}/update', 'PacientesController@update');
+Route::group(['prefix'=>'pacientes', 'where'=>['id'=>'[0-9]+']], function (){
+    Route::get('', ['as'=>'pacientes', 'uses'=>'PacientesController@index']);
+    Route::get('create', ['as'=>'pacientes.create', 'uses'=>'PacientesController@create']);
+    Route::post('store', ['as'=>'pacientes.store', 'uses'=>'PacientesController@store']);
+    Route::get('{id}/destroy', ['as'=>'pacientes.destroy', 'uses'=>'PacientesController@destroy']);
+    Route::get('{id}/edit', ['as'=>'pacientes.edit', 'uses'=>'PacientesController@edit']);
+    Route::put('{id}/update', ['as'=>'pacientes.update', 'uses'=>'PacientesController@update']);
+});

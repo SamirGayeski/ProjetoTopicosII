@@ -12,7 +12,7 @@
             </ul>
         @endif
 
-        {!! Form::open(['url' => 'convenios/store']) !!}
+        {!! Form::open(['route' => 'convenios.store']) !!}
 
         <div class="form-group">
             {!! Form::label('nome', 'Nome:') !!}
@@ -26,6 +26,7 @@
 
         <div class="form-group">
             {!! Form::submit('Criar convênio', ['class'=>'btn btn-primary']) !!}
+            {!! Form::reset('Cancelar', ['class'=>'btn btn-primary']) !!}
         </div>
 
         {!! Form::close() !!}

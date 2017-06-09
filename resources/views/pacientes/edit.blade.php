@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <h1>Editando procedimento: {{$procedimento->nome}}</h1>
+        <h1>Editando procedimento: {{$paciente->nome}}</h1>
 
         @if($errors->any())
             <ul class="alert alert-danger">
@@ -12,7 +12,7 @@
             </ul>
         @endif
 
-        {!! Form::open(['url' => "procedimentos/$procedimento->id/update", 'method'=>'put']) !!}
+        {!! Form::open(['url' => ["pacientes.update", $paciente->id], 'method'=>'put']) !!}
 
         <div class="form-group">
             {!! Form::label('nome', 'Nome:') !!}

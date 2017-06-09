@@ -10,6 +10,7 @@
                 <th>Nome</th>
                 <th>Duração</th>
                 <th>Descrição</th>
+                <th>Ação</th>
             </tr>
             </thead>
             <tbody>
@@ -18,6 +19,10 @@
                     <td>{{$proc->nome}}</td>
                     <td>{{$proc->duracao}}</td>
                     <td>{{$proc->descricao}}</td>
+                    <td>
+                        <a href="{{ route('procedimentos.edit', ['id'=>$proc->id]) }}" class="btn-sm btn-success">Editar</a>
+                        <a href="{{ route('procedimentos.destroy', ['id'=>$proc->id]) }}" class="btn-sm btn-danger">Remover</a>
+                    </td>
                 </tr>
             @endforeach
             </tbody>

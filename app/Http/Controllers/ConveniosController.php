@@ -22,12 +22,12 @@ class ConveniosController extends Controller
         $novo_convenio = $request->all();
         Convenio::create($novo_convenio);
 
-        return redirect('convenios');
+        return redirect()->route('convenios');
     }
 
     public function destroy($id){
         Convenio::find($id)->delete();
-        return redirect ('convenios');
+        return redirect()->route ('convenios');
     }
 
     public function edit($id){
@@ -37,6 +37,6 @@ class ConveniosController extends Controller
 
     public function update(ConvenioRequest $request, $id){
         $convenio = Convenio::find($id)->update($request->all());
-        return redirect('convenios');
+        return redirect()->route('convenios');
     }
 }
