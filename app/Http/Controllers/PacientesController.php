@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Paciente;
+use App\Http\Requests\PacienteRequest;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
 
 class PacientesController extends Controller
 {

@@ -26,7 +26,7 @@
 
         <div class="form-group">
             {!! Form::label('sexo', 'Sexo:') !!}
-            {!! Form::select('sexo', array('M' => 'Masculino', 'F' => 'Feminino'), 'M', ['class'=>'form-control']) !!}
+            {!! Form::select('sexo', array('Masculino' => 'Masculino', 'Feminino' => 'Feminino'), 'Masculino', ['class'=>'form-control']) !!}
         </div>
 
         <div class="form-group">
@@ -101,6 +101,13 @@
 
         <div class="form-group">
             {!! Form::label('situacao', 'Situação:') !!}
+            <br/>
+            <label class="checkbox-inline">
+                {!! Form::checkbox('situacao', 'Ativo', true) !!}
+            Ativo</label>
+            <label class="checkbox-inline">
+                {!! Form::checkbox('situacao', 'Inativo') !!}
+            Inativo</label>
         </div>
 
         <div class="form-group">
@@ -108,7 +115,7 @@
             {!! Form::text('cns', null, ['class'=>'form-control']) !!}
         </div>
 
-        <div>
+        <div class="form-group">
             {!! Form::label('convenio_id', 'Convênio:') !!}
             {{ Form::select('convenio_id', \App\Convenio::orderBy('nome')->pluck('nome','id')->toArray(), null, ['class'=>'form-control']) }}
         </div>

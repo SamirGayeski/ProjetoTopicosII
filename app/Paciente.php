@@ -12,7 +12,7 @@ class Paciente extends Model
         'sexo',
         'email',
         'telefoneCelular',
-        'telefoenResidencial',
+        'telefoneResidencial',
         'endereco',
         'bairro',
         'numero',
