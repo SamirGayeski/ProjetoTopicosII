@@ -41,3 +41,21 @@ Route::group(['prefix'=>'pacientes', 'where'=>['id'=>'[0-9]+']], function (){
     Route::get('{id}/edit', ['as'=>'pacientes.edit', 'uses'=>'PacientesController@edit']);
     Route::put('{id}/update', ['as'=>'pacientes.update', 'uses'=>'PacientesController@update']);
 });
+
+Route::group(['prefix'=>'users', 'where'=>['id'=>'[0-9]+']], function (){
+    Route::get('', ['as'=>'users', 'uses'=>'UsersController@index']);
+    Route::get('create', ['as'=>'users.create', 'uses'=>'UsersController@create']);
+    Route::post('store', ['as'=>'users.store', 'uses'=>'UsersController@store']);
+    Route::get('{id}/destroy', ['as'=>'users.destroy', 'uses'=>'UsersController@destroy']);
+    Route::get('{id}/edit', ['as'=>'users.edit', 'uses'=>'UsersController@edit']);
+    Route::put('{id}/update', ['as'=>'users.update', 'uses'=>'UsersController@update']);
+});
+
+Route::group(['prefix'=>'agendamentos', 'where'=>['id'=>'[0-9]+']], function (){
+    Route::get('', ['as'=>'agendamentos', 'uses'=>'AgendamentosController@index']);
+    Route::get('create', ['as'=>'agendamentos.create', 'uses'=>'AgendamentosController@create']);
+    Route::post('store', ['as'=>'agendamentos.store', 'uses'=>'AgendamentosController@store']);
+    Route::get('{id}/destroy', ['as'=>'agendamentos.destroy', 'uses'=>'AgendamentosController@destroy']);
+    Route::get('{id}/edit', ['as'=>'agendamentos.edit', 'uses'=>'AgendamentosController@edit']);
+    Route::put('{id}/update', ['as'=>'agendamentos.update', 'uses'=>'AgendamentosController@update']);
+});

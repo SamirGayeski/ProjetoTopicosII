@@ -15,7 +15,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'nome', 'login', 'password', 'email', 'telefone', 'sexo', 'dataCriacao', 'situacao', 'tipoUsuario'
     ];
 
     /**
@@ -26,4 +26,9 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    public function agendamentos(){
+        return $this->hasMany('App\Agendamento');
+    }
+
 }

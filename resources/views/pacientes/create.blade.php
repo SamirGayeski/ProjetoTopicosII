@@ -141,7 +141,7 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Criar paciente', ['class'=>'btn btn-primary']) !!}
+            {!! Form::submit('Criar paciente', ['class'=>'btn btn-success']) !!}
         </div>
 
         {!! Form::close() !!}

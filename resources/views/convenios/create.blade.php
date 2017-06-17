@@ -25,8 +25,7 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Criar convênio', ['class'=>'btn btn-primary']) !!}
-            {!! Form::reset('Cancelar', ['class'=>'btn btn-primary']) !!}
+            {!! Form::submit('Criar convênio', ['class'=>'btn btn-success']) !!}
         </div>
 
         {!! Form::close() !!}

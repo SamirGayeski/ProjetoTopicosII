@@ -34,4 +34,8 @@ class Paciente extends Model
     public function convenio(){
         return $this->belongsTo('App\Convenio');
     }
+
+    public function agendamentos(){
+        return $this->hasMany('App\Agendamento');
+    }
 }

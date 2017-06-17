@@ -12,7 +12,7 @@
             </ul>
         @endif
 
-        {!! Form::open(['url' => ["procedimentos.update", $procedimento->id], 'method'=>'put']) !!}
+        {!! Form::open(['route' => ["procedimentos.update", $procedimento->id], 'method'=>'put']) !!}
 
         <div class="form-group">
             {!! Form::label('nome', 'Nome:') !!}
@@ -30,7 +30,7 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Editar', ['class'=>'btn btn-primary']) !!}
+            {!! Form::submit('Editar', ['class'=>'btn btn-success']) !!}
         </div>
 
         {!! Form::close() !!}

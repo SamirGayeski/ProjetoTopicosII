@@ -30,7 +30,7 @@
         </div>
 
         <div class="form-group">
-            {!! Form::submit('Criar procedimento', ['class'=>'btn btn-primary']) !!}
+            {!! Form::submit('Criar procedimento', ['class'=>'btn btn-success']) !!}
         </div>
 
         {!! Form::close() !!}

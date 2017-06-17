@@ -149,7 +149,7 @@
             {!! Form::text('acomodacao', $paciente->acomodacao, ['class'=>'form-control']) !!}
         </div>
         <div class="form-group">
-            {!! Form::submit('Editar', ['class'=>'btn btn-primary']) !!}
+            {!! Form::submit('Editar', ['class'=>'btn btn-success']) !!}
         </div>
 
         {!! Form::close() !!}
