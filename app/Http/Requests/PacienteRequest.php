@@ -31,7 +31,7 @@ class PacienteRequest extends FormRequest
             'bairro' => 'required',
             'numero' => 'required|numeric',
             'cidade' => 'required',
-            'uf' => 'required|min:2|max:2',
+            'uf' => 'min:2|max:2',
             'cpf' => 'required',
             'rg' => 'required',
             'profissao' => 'required'
