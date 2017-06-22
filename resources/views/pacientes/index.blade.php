@@ -35,6 +35,6 @@
             @endforeach
             </tbody>
         </table>
-        <a href="{{ route('agendamentos.create') }}" class="btn-sm btn-primary"><span class="glyphicon glyphicon-plus"></span> Incluir Paciente</a>
+        <a href="{{ route('pacientes.create') }}" class="btn-sm btn-primary"><span class="glyphicon glyphicon-plus"></span> Incluir Paciente</a>
     </div>
 @endsection
